@@ -1,4 +1,17 @@
-<?php
+<?php 
+
+$mysqli = new mysqli("localhost", "danny", "danny", "calzado");
+
+
+if(!$mysqli) {
+      echo "ERROR AL CONECTAR A LA BASE DE DATOS";
+}
+else{
+ //echo "CONECTADO A LA BASE DE DATOS";
+}
+
+/*
+
 
 include("database.php");
 session_start();
@@ -50,6 +63,6 @@ if(isset($_POST["btnguardar"])){
 }
 
 ?>
-
+*/
 
 ?>
