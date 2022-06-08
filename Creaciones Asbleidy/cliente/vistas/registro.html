@@ -29,24 +29,25 @@
         </ul>
     </nav>
     <main>
-        <form class="formulario">
+        <form class="formulario" action="../../servidor/registrar_usuario.php" method="POST">
             <h1>Registro</h1>
             <div class="cont">
                 <div class="input-cont">
                     <i class="fas fa-user icon"></i>
                     <input type="text" onkeypress='return event.charCode < 48 || event.charCode > 57'
-                        placeholder="Ingrese su nombre" name="nombre" required>
+                        placeholder="Ingrese su nombre" id="nombre" name="nombre" required>
                 </div>
                 <div class="input-cont">
                     <i class="far fa-envelope icon"></i>
-                    <input type="email" placeholder="Ingrese su correo" name="email" required></div>
+                    <input type="email" placeholder="Ingrese su correo" id="email" name="email" required></div>
                 <div class="input-cont">
                     <i class="fas fa-lock icon"></i>
                     <input type="password" onkeypress='return event.charCode != 32' placeholder="Ingrese su contraseña"
-                        name="pass" required>
+                       id="pass" name="pass" required>
                 </div>
                 <p>Al registrarte aceptas nuestros <a class="link" href="tyc.html">Términos y Condiciones</a></p>
-                <input type="submit" value="Registrar" onclick="location.href='login.html'" class="button">
+                <input type="submit" value="Registrar"  class="button">
+                <!--onclick="location.href='login.html'"-->
             </div>
         </form>
     </main>
