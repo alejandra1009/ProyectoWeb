@@ -20,30 +20,31 @@
         </nav>
     </header>
     <main>
-        <form class="formulario" action="conexion.php" method="POST">
+        <form class="formulario" action="../../servidor/insertar_producto.php" method="POST">
             <h1>Crear Producto</h1>
             <div class="cont">
                 <div class="input-cont">
                     <i class="fa fa-hashtag icon"></i>
                     <input type="number" min="1" onkeypress='return event.charCode >= 48 && event.charCode <= 57'
-                        placeholder="Ingrese el código" name="codigo" required>
+                        placeholder="Ingrese el código" id="codigo" name="codigo" required>
                 </div>
                 <div class="input-cont">
                     <i class="fa fa-archive icon"></i>
                     <input type="text" onkeypress='return event.charCode < 48 || event.charCode > 57'
-                        placeholder="Ingrese el nombre" name="nombre" required>
+                        placeholder="Ingrese el nombre" id="nombre" name="nombre" required>
                 </div>
                 <div class="input-cont">
                     <i class="fa fa-money icon"></i>
                     <input type="number" min="100" step="100"
                         onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="Ingrese el precio"
-                        name="precio" required>
+                        id="precio" name="precio" required>
                 </div>
                 <div class="input-cont">
                     <i class="fa fa-picture-o icon"></i>
                     <input accept="image/*" type="file" name="imagen">
                 </div>
-                <input type="submit" value="Guardar" class="button" name="btncrearp" onclick="location.href='productos.html'">
+                <input type="submit" value="Guardar" class="button" name="btncrearp">
+                <!--<input type="submit" value="Guardar" class="button" name="btncrearp" onclick="location.href='productos.html'">-->
             </div>
         </form>
     </main>

@@ -243,6 +243,8 @@ ALTER TABLE `salida`
 --
 -- Filtros para la tabla `datos_pago`
 --
+-----------------------------
+------------------AQUI VOY
 ALTER TABLE `datos_pago`
   ADD CONSTRAINT `datos_pago_ibfk_1` FOREIGN KEY (`email`) REFERENCES `usuario` (`email`);
 

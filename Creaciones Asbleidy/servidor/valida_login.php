@@ -4,6 +4,7 @@
 
  $email = $_POST['email'];
  $pass = $_POST['pass'];
+ //$tipo = // validar con el tipo de usuario si es admin llevarlo a inicio
 
 
  $ux = '';
@@ -16,12 +17,14 @@
     while ($row = $resultado->fetch_array()) {
       $email_v = $row['email'];
       $pass_v = $row['pass'];
+      
 
      // echo $email_v;
      // echo $pass_v;
 
       if ($email===$email_v and $pass==$pass_v){
         //header("Location:../cliente/vistas/login.html");
+      
         header("Location:../cliente/vistas/tienda.html");
 
         //valida en cascada OJO
