@@ -20,7 +20,7 @@
         </nav>
     </header>
     <main>
-        <form class="formulario" action="../../servidor/insertar_producto.php" method="POST">
+        <form class="formulario" action="../../servidor/insertar_producto.php" method="POST" enctype="multipart/form-data">
             <h1>Crear Producto</h1>
             <div class="cont">
                 <div class="input-cont">
@@ -41,7 +41,7 @@
                 </div>
                 <div class="input-cont">
                     <i class="fa fa-picture-o icon"></i>
-                    <input accept="image/*" type="file" name="imagen">
+                    <input accept="image/*" type="file" id="imagen" name="imagen">
                 </div>
                 <input type="submit" value="Guardar" class="button" name="btncrearp">
                 <!--<input type="submit" value="Guardar" class="button" name="btncrearp" onclick="location.href='productos.html'">-->
