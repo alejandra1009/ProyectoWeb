@@ -13,7 +13,7 @@ $resultado=$mysqli ->query($sql);
 
 if($resultado>0){
   //echo 'REGISTRO AGREGADO';
- header("Location:../cliente/vistas/productos.html");
+ header("Location:../cliente/vistas/productos.php");
  
  //exit();
  
