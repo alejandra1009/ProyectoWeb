@@ -46,10 +46,11 @@
                         $codigo = $row['codigo'];
                         $nombre = $row['nombre'];
 
+                        $aux = $nombre;
                     ?>
 
-                        
-                            <option value="$nombre"><?php echo $nombre; ?></option>
+                            
+                            <option value="<?php $nombre;?>"><?php echo $nombre; ?></option>
                         
                 <?php
 

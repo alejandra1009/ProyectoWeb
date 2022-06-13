@@ -43,9 +43,6 @@
                         //$ima
                 
                         ?>
-
-                   
-                        
                     <tr>
                     <td><b><center><?php echo $codigo;?></center></b></td>
                     <td><center><?php echo $nombre; ?></center></td>

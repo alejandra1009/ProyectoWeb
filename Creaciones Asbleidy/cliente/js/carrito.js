@@ -3,13 +3,11 @@ function carrito(){
     //operaciones de calculo
     
     var cantidad="";
-    var nombre="";
+    
 
     var cantidad = document.getElementById("cantidad").value;
-    var nombre = document.getElementById("nombre").value;
     document.getElementById('cantidad').innerHTML = cantidad;
-    document.getElementById('nombre').innerHTML = nombre;
-    console.log(cantidad+nombre);
+    console.log(cantidad);
     /*
     
    

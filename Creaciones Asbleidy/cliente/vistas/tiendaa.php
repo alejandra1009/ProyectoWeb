@@ -43,7 +43,7 @@
                         ?>
 
                         <section class="produto">
-                        <h1 id="nom"><?php echo $nombre; ?></h1>
+                        <h1 id="nombre"><?php echo $nombre; ?></h1>
                         <img id="imagenp" src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']); ?>">
                         <h2><?php echo $precio; ?></h2>
                         <input type="number" id="cantidad" name="cantidad" min="1"  placeholder="Cantidad"
