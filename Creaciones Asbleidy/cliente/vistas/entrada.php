@@ -49,7 +49,7 @@
                     ?>
 
                         
-                            <option value="p1"><?php echo $nombre; ?></option>
+                            <option value="$nombre"><?php echo $nombre; ?></option>
                         
                 <?php
 

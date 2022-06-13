@@ -43,12 +43,12 @@
                         ?>
 
                         <section class="produto">
-                        <h1><?php echo $nombre; ?></h1>
+                        <h1 id="nom"><?php echo $nombre; ?></h1>
                         <img id="imagenp" src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']); ?>">
                         <h2><?php echo $precio; ?></h2>
-                        <input type="number" name="cantidad" min="1" placeholder="Cantidad"
+                        <input type="number" id="cantidad" name="cantidad" min="1"  placeholder="Cantidad"
                          onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
-                         <input type="submit" name="agregar" value="Agregar" class="button-add">
+                         <input type="submit" name="agregar" value="Agregar" class="button-add"  onclick="carrito()">
     
                         </section> 
                         
@@ -60,6 +60,11 @@
    
    </section>
       
+    <?php
+
+
+    ?>
+
 
     <div class="tabla">
         <h3 class="titulo">Carrito de compras</h3>
@@ -147,6 +152,9 @@
         </div>
         <h2 class="titulo-final">&copy; Creaciones Asbleidy</h2>
     </footer>
+
+
+    <script src="../js/carrito.js"></script>
 </body>
 
 </html>

@@ -26,7 +26,9 @@
                 <!-- AGREGAR NOMBRE COLOR Y TALLA-->
                 <tr class="tre">
                   <th>Fecha</th>              
-                  <th>Cantidad</th>             
+                  <th>Cantidad</th>     
+                  <th>Color</th>    
+                  <th>Talla</th>          
                 </tr>
 
 
@@ -37,12 +39,16 @@
                     if($resultado){ while($row = $resultado->fetch_array()){
                         $fecha = $row['fecha'];
                         $unidades_i = $row['unidades_i'];
+                        $color = $row['color'];
+                        $talla = $row['talla'];
                         //$ima
                 
                         ?>
                     <tr>
                     <td><center><?php echo $fecha; ?></center></td>
                     <td><center><?php echo $unidades_i; ?></center></td>
+                    <td><center><?php echo $color; ?></center></td>
+                    <td><center><?php echo $talla; ?></center></td>
                     </tr>
                     <?php 
                     }
