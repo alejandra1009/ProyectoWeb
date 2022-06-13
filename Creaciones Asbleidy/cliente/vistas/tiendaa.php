@@ -28,31 +28,38 @@
 
     <h3 class="titulo">Catálogo de productos</h3>
     <section id="produtos">        
-        <section class="produto">
-            <h1>Nombre del producto</h1>
-            <img id="imagenp" src="../img/product-1.jpg">
-            <h2>Precio</h2>
-            <input type="number" name="cantidad" min="1" placeholder="Cantidad"
-                onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
-            <input type="submit" name="agregar" value="Agregar" class="button-add">
-        </section>
-        <section class="produto">
-            <h1>Nombre del producto</h1>
-            <img id="imagenp" src="../img/product-2.jpg">
-            <h2>Precio</h2>
-            <input type="number" name="cantidad" min="1" placeholder="Cantidad"
-                onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
-            <input type="submit" name="agregar" value="Agregar" class="button-add">
-        </section>
-        <section class="produto">
-            <h1>Nombre del producto</h1>
-            <img id="imagenp" src="../img/product-3.jpg">
-            <h2>Precio</h2>
-            <input type="number" name="cantidad" min="1" placeholder="Cantidad"
-                onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
-            <input type="submit" name="agregar" value="Agregar" class="button-add">
-        </section>
-    </section>
+    
+    <!-- CODIGO PHP -->
+    <?php
+            include '../../servidor/conexion.php';
+            $consulta="SELECT * from producto";
+            $resultado=mysqli_query($mysqli,$consulta);
+                    if($resultado){ while($row = $resultado->fetch_array()){
+                        $nombre = $row['nombre'];
+                        //IMAGEN
+                        $precio = $row['precio'];
+                        //$ima
+                
+                        ?>
+
+                        <section class="produto">
+                        <h1><?php echo $nombre; ?></h1>
+                        <img id="imagenp" src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']); ?>">
+                        <h2><?php echo $precio; ?></h2>
+                        <input type="number" name="cantidad" min="1" placeholder="Cantidad"
+                         onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+                         <input type="submit" name="agregar" value="Agregar" class="button-add">
+    
+                        </section> 
+                        
+    
+    <?php 
+                    }
+                    
+                     } ?>
+   
+   </section>
+      
 
     <div class="tabla">
         <h3 class="titulo">Carrito de compras</h3>

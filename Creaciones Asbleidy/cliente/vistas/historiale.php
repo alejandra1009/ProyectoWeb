@@ -51,8 +51,6 @@
                
             </table>
 
-
-   
         </div>
         <div class="enlace">
             <a href="inventario.html" id="enlaces">Volver al inventario</a>

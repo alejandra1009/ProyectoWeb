@@ -47,6 +47,11 @@ CREATE TABLE `entrada` (
   `unidades_i` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- SE LE AGREGO NOMBRE, COLOR Y TALLA
+-- nombre varchar(40),
+-- color varchar(20),
+-- talla int(11);
+
 -- --------------------------------------------------------
 
 --
