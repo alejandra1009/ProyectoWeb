@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Creaciones Asbleidy</title>
     <link rel="shortcut icon" href="../img/icono.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/historial.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/18dd3f8795.js" crossorigin="anonymous"></script>
 </head>
@@ -20,26 +20,47 @@
         </nav>
     </header>
     <main>
-        <div class="menu">
-            <h1>Inventario</h1>
-            <button type="submit" onclick="location.href='productosd.php'"><i class="fa fa-archive" id="imenu"></i>
-                <p>Productos disponibles</p>
-            </button>
-            <button type="submit" onclick="location.href='productosnd.html'"><i class="fa fa-times-circle" id="imenu"></i>
-                <p>Productos no disponibles</p>
-            </button>
-            <button type="submit" onclick="location.href='entrada.html'"><i class="fa fa-shopping-cart" id="imenu"></i>
-                <p>Entrada de productos</p>
-            </button>
-            <button type="submit" onclick="location.href='historiale.html'"><i class="fa fa-file-text" id="imenu"></i>
-                <p>Historial de entradas</p>
-            </button>
-            <button type="submit" onclick="location.href='historials.html'"><i class="fa fa-sign-out" id="imenu"></i>
-                <p>Historial de salidas</p>
-            </button>
+        <div class="inicio">
+            <h1>Productos disponibles</h1>
+            <table>
+                    <tr class="tre">
+                    <th><b>Código</b></th>
+                    <th><b>Nombre</b></th>
+                    <th><b>Precio</b></th>
+                    <th><b>Imagen</b></th>
+                    </tr>
+
+
+
+            <?php
+            include '../../servidor/conexion.php';
+            $consulta="SELECT * from producto";
+            $resultado=mysqli_query($mysqli,$consulta);
+                    if($resultado){ while($row = $resultado->fetch_array()){
+                        $codigo = $row['codigo'];
+                        $nombre = $row['nombre'];
+                        $precio = $row['precio'];
+                        //$ima
+                
+                        ?>
+
+                   
+                        
+                    <tr>
+                    <td><b><center><?php echo $codigo;?></center></b></td>
+                    <td><center><?php echo $nombre; ?></center></td>
+                    <td><center><?php echo $precio; ?></center></td>
+                   <td><center><img src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']); ?>" style="width: 52px;"></center> </td>
+                    </tr>
+                    <?php 
+                    }
+                    
+                     } ?>
+               
+            </table>
         </div>
         <div class="enlace">
-            <a href="inicio.html" id="enlaces">Volver al inicio</a>
+            <a href="inventario.html" id="enlaces">Volver al inventario</a>
         </div>
     </main>
     <footer>
