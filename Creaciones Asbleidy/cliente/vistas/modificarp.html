@@ -20,29 +20,31 @@
         </nav>
     </header>
     <main>
-        <form class="formulario" action="conexion.php" method="POST">
+        <form class="formulario" action="../../servidor/modifica_producto.php" method="POST" enctype="multipart/form-data">
             <h1>Modificar Producto</h1>
             <div class="cont">
                 <div class="input-cont">
                     <i class="fa fa-hashtag icon"></i>
-                    <input type="text" placeholder="Código" name="codigo" readonly>
+                    <input type="text" placeholder="Código" id="codigo" name="codigo">
                 </div>
                 <div class="input-cont">
                     <i class="fa fa-archive icon"></i>
-                    <input type="text" onkeypress='return event.charCode < 48 || event.charCode > 57'
-                        placeholder="Ingrese el nombre" name="nombre" required>
+                    <input type="text" 
+                        placeholder="Ingrese el nombre" id="nombre" name="nombre" required>
+                        <!--onkeypress='return event.charCode < 48 || event.charCode > 57'-->
                 </div>
                 <div class="input-cont">
                     <i class="fa fa-money icon"></i>
                     <input type="number" min="100" step="100"
                         onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="Ingrese el precio"
-                        name="precio" required>
+                        id="precio" name="precio" required>
                 </div>
                 <div class="input-cont">
                     <i class="fa fa-picture-o icon"></i>
-                    <input accept="image/*" type="file" name="imagen" required>
+                    <input accept="image/*" type="file" id="imagen" name="imagen" required>
                 </div>
-                <input type="submit" value="Guardar cambios" class="button" name="btnmodificarp" onclick="location.href='productos.html'">
+                <input type="submit" value="Guardar cambios" class="button" name="btnmodificarp">
+                <!--<input type="submit" value="Guardar cambios" class="button" name="btnmodificarp" onclick="location.href='productos.html'">-->
             </div>
         </form>
     </main>
