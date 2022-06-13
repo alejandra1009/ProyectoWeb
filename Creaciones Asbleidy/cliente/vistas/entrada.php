@@ -30,8 +30,8 @@
                 <!-- -->
                 <div class="input-cont">
                         <i class="fa fa-archive icon"></i>
-                        <select name="cantidad" id="cantidad" required>
-                            <option value="">Seleccione un producto</option>
+                        <select name="nombre" id="nombre" required>
+                            <option>Seleccione un producto</option> <!-- VALIDAR SI EL NOMBRE DEL PRODUCTO VA EN VALUE -->
 
 
 
@@ -65,7 +65,7 @@
                 <div class="input-cont">
                     <i class="fa fa-list-ol icon"></i>
                     <input type="number" min="1" onkeypress='return event.charCode >= 48 && event.charCode <= 57'
-                        placeholder="Ingrese una cantidad" name="cantidad" required>
+                        placeholder="Ingrese una cantidad" id="cantidad" name="cantidad" required>
                 </div>
                 <div class="input-cont">
                     <i class="fa fa-sun-o icon"></i>
