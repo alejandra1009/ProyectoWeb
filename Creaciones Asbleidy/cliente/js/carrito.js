@@ -8,6 +8,8 @@ function carrito(){
     var cantidad = document.getElementById("cantidad").value;
     document.getElementById('cantidad').innerHTML = cantidad;
     console.log(cantidad);
+    //var cantidad_tabla = document.getElementById("cantidad_tabla");
+    //document.write("<td id="cantidad_tabla">Cantidad</td>");
     /*
     
    

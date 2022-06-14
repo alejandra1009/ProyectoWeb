@@ -133,7 +133,7 @@ CREATE TABLE `tarjeta` (
   `banco` varchar(30) NOT NULL,
   `cvv` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
+-- tarjeta cambie a varchar el campo fecha_c para no formatiar texto
 -- --------------------------------------------------------
 
 --

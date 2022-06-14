@@ -119,7 +119,7 @@
                         <option value="t20">42</option>
                 </td>
                 <td>Precio</td>
-                <td>Cantidad</td>
+                <td id="cantidad_tabla">Cantidad</td>
                 <td>Subtotal</td>
                 <td>Eliminar</td>
             </tr>

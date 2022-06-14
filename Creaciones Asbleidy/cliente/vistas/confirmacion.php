@@ -20,43 +20,40 @@
         </nav>
     </header>
     <main>
-        <form class="formulario" action="confirmacion.php" method="POST">
-        
-            <!---->
-            <h1>Tarjeta</h1>
+        <?php
+
+        $nombre = $_POST['nombre'];
+        $numero_t = $_POST['numero_t']; 
+        $fecha_c = $_POST['fecha_c'];
+        $banco = $_POST['banco'];
+        $cvv = $_POST['cvv'];
+
+        ?>
+        <!-- DEBO TRAREME LOS DATOS DEL ANTERIOR FORMULARIO-->
+        <form class="formulario"  action="../../servidor/registro_tarjeta.php" method="POST">
+            <h1>Confirmación</h1>
             <div class="cont">
+                <p style="margin-bottom: 30px;">Verifica la información presentada y presiona "Pagar" para efectuar el
+                    pago, y si ya no deseas efectuar el pago presiona "Cancelar"</p>
                 <div class="input-cont">
                     <i class="fas fa-user icon"></i>
-                    <input type="text" placeholder="Ingrese el nombre del titular" id="nombre" name="nombre" required
-                        onkeypress='return event.charCode < 48 || event.charCode > 57'>
+                    <input type="text" placeholder="<?php echo $nombre; ?>" name="nombre" disabled>
                 </div>
                 <div class="input-cont">
                     <i class="fa fa-credit-card-alt icon"></i>
-                    <input type="text" placeholder="Ingrese el número de la tarjeta" id="numero_t" name="numero_t" required
-                        type="number" min="1" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
-                </div>
-                <div class="input-cont">
-                    <i class="fa fa-calendar icon"></i>
-                    <input type="date" placeholder="Ingrese la fecha de caducidad" id="fecha_c" name="fecha_c" required>
+                    <input type="text" placeholder="Tipo de pago" name="tipop" disabled>
                 </div>
                 <div class="input-cont">
                     <i class="fa fa-home icon"></i>
-                    <select  id="banco" name="banco" required>
-                        <option value="">Seleccione un banco</option>
-                        <option value="BANCOLOMBIA">Bancolombia</option>
-                        <option value="DAVIVIENDA">Davivienda</option>
-                        <option value="AGRARIO">Banco Agrario</option>
-                        <option value="BANCO_POPULAR">Banco Popular</option>
-                        <option value="BBVA">BBVA</option>
-                    </select>
+                    <input type="text" placeholder=" <?php echo $banco; ?> " name="banco" disabled>
                 </div>
                 <div class="input-cont">
-                    <i class="fa fa-th-list icon"></i>
-                    <input type="number" placeholder="Ingrese el cvv" name="cvv" required min="100" max="999"
-                        onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                    <i class="fa fa-money icon"></i>
+                    <input type="text" placeholder="Total a pagar" name="total" disabled>
                 </div>
-                <input type="submit" value="Guardar" class="button">
-                <!--onclick="location.href='confirmacion.html'-->
+                <input type="submit" value="Cancelar" class="button" onclick="location.href='tienda.html'">
+                <input type="submit" value="Guardar" class="button" >
+                <!-- onclick="location.href='comprobante.html'"-->
             </div>
         </form>
     </main>
