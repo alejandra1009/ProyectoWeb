@@ -25,7 +25,7 @@
       if ($email===$email_v and $pass==$pass_v){
         //header("Location:../cliente/vistas/login.html");
       
-        header("Location:../cliente/vistas/tienda.html");
+        header("Location:../cliente/vistas/tiendaa.php");
 
         //valida en cascada OJO
 

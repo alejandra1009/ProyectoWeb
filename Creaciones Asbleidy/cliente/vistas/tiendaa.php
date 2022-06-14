@@ -22,7 +22,7 @@
 
     <div class="usuario">
         <i class="fas fa-user icon" style="margin-left: 15px">
-            <a href="datosu.html">Nombre del usuario</a>
+            <a href="datosu.html">Bienvenido Danny!</a>
         </i>
     </div>
 

@@ -22,36 +22,38 @@
     <main>
         <?php
 
-        $nombre = $_POST['nombre'];
-        $numero_t = $_POST['numero_t']; 
-        $fecha_c = $_POST['fecha_c'];
-        $banco = $_POST['banco'];
-        $cvv = $_POST['cvv'];
+
+        //AQUI DEBO VALIDAR SI EL USUARIO ES TARJETA O PSE Y HACER EL REGISTRO SEGUN SEA
+        $nombre2 = $_POST['nombre'];
+        $numero_t2 = $_POST['numero_t']; 
+    //    $fecha_c2 = $_POST['fecha_c'];
+    //    $banco2 = $_POST['banco'];
+   //     $cvv2 = $_POST['cvv'];
 
         ?>
         <!-- DEBO TRAREME LOS DATOS DEL ANTERIOR FORMULARIO-->
-        <form class="formulario"  action="../../servidor/registro_tarjeta.php" method="POST">
+        <form class="formulario"   method="POST">
             <h1>Confirmación</h1>
             <div class="cont">
                 <p style="margin-bottom: 30px;">Verifica la información presentada y presiona "Pagar" para efectuar el
                     pago, y si ya no deseas efectuar el pago presiona "Cancelar"</p>
                 <div class="input-cont">
                     <i class="fas fa-user icon"></i>
-                    <input type="text" placeholder="<?php echo $nombre; ?>" name="nombre" disabled>
+                    <input type="text" placeholder="<?php echo $nombre2; ?>" id="nombre" name="nombre" disabled>
                 </div>
                 <div class="input-cont">
                     <i class="fa fa-credit-card-alt icon"></i>
-                    <input type="text" placeholder="Tipo de pago" name="tipop" disabled>
+                    <input type="text" placeholder="Tipo de pago" id="tipop" name="tipop" disabled>
                 </div>
                 <div class="input-cont">
                     <i class="fa fa-home icon"></i>
-                    <input type="text" placeholder=" <?php echo $banco; ?> " name="banco" disabled>
+                    <input type="text" placeholder=" <?php echo $banco2; ?>" id="banco" name="banco" disabled>
                 </div>
                 <div class="input-cont">
                     <i class="fa fa-money icon"></i>
                     <input type="text" placeholder="Total a pagar" name="total" disabled>
                 </div>
-                <input type="submit" value="Cancelar" class="button" onclick="location.href='tienda.html'">
+                <input type="submit" value="Cancelar" class="button" onclick="location.href='tiendaa.php'">
                 <input type="submit" value="Guardar" class="button" >
                 <!-- onclick="location.href='comprobante.html'"-->
             </div>
