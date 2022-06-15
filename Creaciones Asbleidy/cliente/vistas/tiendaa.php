@@ -45,10 +45,10 @@
                         <section class="produto">
                         <h1 id="nombre"><?php echo $nombre; ?></h1>
                         <img id="imagenp" src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']); ?>">
-                        <h2><?php echo $precio; ?></h2>
+                        <h2 id="precio"> <?php echo $precio; ?></h2>
                         <input type="number" id="cantidad" name="cantidad" min="1"  placeholder="Cantidad"
                          onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
-                         <input type="submit" name="agregar" value="Agregar" class="button-add"  onclick="carrito()">
+                         <input type="button" name="agregar" value="Agregar" class="button-add"  onclick="carrito()">
     
                         </section> 
                         
@@ -80,7 +80,7 @@
                 <th>Acción</th>
             </tr>
             <tr>
-                <td>producto1</td>
+                <td><input type="text" name="nombre_text" id="nombre_text"></td>
                 <td><img src="../img/product-1.jpg" id="imgt"></td>
                 <td>
                     <select name="colores" id="color" required>
@@ -118,9 +118,9 @@
                         <option value="t19">41</option>
                         <option value="t20">42</option>
                 </td>
-                <td>Precio</td>
-                <td id="cantidad_tabla">Cantidad</td>
-                <td>Subtotal</td>
+                <td><input type="text" name="precio_text" id="precio_text"></td>
+                <td ><input type="text" name="cantidad_text" id="cantidad_text"></td>
+                <td><input type="text" name="subtotal" id="subtotal"></td>
                 <td>Eliminar</td>
             </tr>
             <tr>
