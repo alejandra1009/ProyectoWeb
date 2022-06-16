@@ -1,6 +1,18 @@
+<?php
+$nombre = '';
+$precio = 0;
+$cantidad = 0;
+                    if(isset($_POST['submit'])){
+                        $nombre = $_POST['nombre'];
+                      //  $color = $_POST['color'];
+                       // $talla = $_POST['talla'];
+                        $precio = $_POST['precio'];
+                        $cantidad = $_POST['cantidad'];
+                    }
+                    
+                ?>
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +23,6 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/18dd3f8795.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
     <header class="encabezado">
         <img src="../img/marca.png" alt="Logo" height="70px">
@@ -28,7 +39,6 @@
 
     <h3 class="titulo">Catálogo de productos</h3>
     <section id="produtos">        
-    
     <!-- CODIGO PHP -->
     <?php
             include '../../servidor/conexion.php';
@@ -42,14 +52,18 @@
                 
                         ?>
 
-                        <section class="produto">
+                    <section class="produto">
+                    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
                         <h1 id="nombre"><?php echo $nombre; ?></h1>
                         <img id="imagenp" src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']); ?>">
-                        <h2 id="precio"> <?php echo $precio; ?></h2>
+                        <h2 name="precio" id="precio"> <?php echo $precio; ?></h2>
                         <input type="number" id="cantidad" name="cantidad" min="1"  placeholder="Cantidad"
                          onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
-                         <input type="button" name="agregar" value="Agregar" class="button-add"  onclick="carrito()">
-    
+
+                        
+                         <input type="submit" id="submit" name="submit" value="Agregar" class="button-add">
+                         <!-- CARRITO() -->
+                    </form>
                         </section> 
                         
     
@@ -67,6 +81,7 @@
 
 
     <div class="tabla">
+        <form action="datos.php" method="POST">
         <h3 class="titulo">Carrito de compras</h3>
         <table class="listado">
             <tr class="tre">
@@ -80,7 +95,7 @@
                 <th>Acción</th>
             </tr>
             <tr>
-                <td><input type="text" name="nombre_text" id="nombre_text"></td>
+                <td><input type="text" name="nombre_text" id="nombre_text" value="<?php echo($nombre)  ?>"></td>
                 <td><img src="../img/product-1.jpg" id="imgt"></td>
                 <td>
                     <select name="colores" id="color" required>
@@ -91,13 +106,13 @@
                         <option value="c4">Rojo</option>
                         <option value="c5">Azul</option>
                         <option value="c6">Gris</option>
-                        <option value="c7">Rosado</option>
+                        <option selected value="c7">Rosado</option>
                     </select>
                 </td>
                 <td>
                     <select name="tallas" id="talla" required>
                         <option value="">Seleccione una talla</option>
-                        <option value="t1">23</option>
+                        <option selected value="t1">23</option>
                         <option value="t2">24</option>
                         <option value="t3">25</option>
                         <option value="t4">26</option>
@@ -118,16 +133,22 @@
                         <option value="t19">41</option>
                         <option value="t20">42</option>
                 </td>
-                <td><input type="text" name="precio_text" id="precio_text"></td>
-                <td ><input type="text" name="cantidad_text" id="cantidad_text"></td>
-                <td><input type="text" name="subtotal" id="subtotal"></td>
+                <td><input type="text" name="precio_text" id="precio_text" value="<?php echo($precio) ?>" ></td>
+                <td ><input type="text" name="cantidad_text" id="cantidad_text"  value="<?php echo($cantidad) ?>"></td>
+                <?php
+                $subtotal=$precio*$cantidad;
+                ?>
+                <td><input type="text" name="subtotal_text" id="subtotal_text" value="<?php echo $subtotal ?>"></td>
                 <td>Eliminar</td>
             </tr>
             <tr>
-                <td colspan="6" style="text-align: right">Total</td>
-                <td>$total</td>
-                <td><a href="datos.html">Pagar</a></td>
+                <td colspan="5" style="text-align: right">Total</td>
+                <td><?php echo $subtotal ?></td>
+                <td> <input type="submit" value="PAGAR"></td>
+                <input type="submit" value="">
+                <!-- <td><a href="datos.html"><b>Pagar</b></a></td> -->
             </tr>
+            </form>
         </table>
     </div>
 
@@ -154,7 +175,7 @@
     </footer>
 
 
-    <script src="../js/carrito.js"></script>
+   <<!-- <script src="../js/carrito.js"></script> -->
 </body>
 
 </html>
