@@ -5,6 +5,7 @@ $nombre_text = $_POST['nombre_text'];
 //  $color = $_POST['color'];
 // $talla = $_POST['talla'];
 $precio_text = $_POST['precio_text'];
+
 //$cantidad = $_POST['cantidad'];
                 
 
@@ -71,7 +72,10 @@ $precio_text = $_POST['precio_text'];
             </div>
         </div>
         <h2 class="titulo-final">&copy; Creaciones Asbleidy</h2>
-       <!-- <p><?php  //echo $nombre_text;?></p> -->
+       <p><?php  
+
+        $subtotal_text = $_POST['subtotal_text'];
+      //echo $subtotal_text;?></p> 
     </footer>
 </body>
 

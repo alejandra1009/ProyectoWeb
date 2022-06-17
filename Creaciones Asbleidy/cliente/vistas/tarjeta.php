@@ -20,7 +20,7 @@
         </nav>
     </header>
     <main>
-        <form class="formulario"   method="POST">
+        <form class="formulario" action="confirmacion.php"  method="POST">
             <!-- action="../../servidor/registro_tarjeta.php" -->
             <!---->
             <h1>Tarjeta</h1>
@@ -55,6 +55,12 @@
                     <input type="number" placeholder="Ingrese el cvv" name="cvv" required min="100" max="999"
                         onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
                 </div>
+                <?php 
+                $tipo_pago = 'tarjeta';
+                
+                
+                
+                ?>
                 <input type="submit" value="Guardar" class="button" >
                 <!-- onclick="location.href='confirmacion.php'" -->
                

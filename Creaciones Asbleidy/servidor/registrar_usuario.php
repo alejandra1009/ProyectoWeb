@@ -11,7 +11,7 @@ $resultado=$mysqli ->query($sql);
 
 if($resultado>0){
  //   echo 'REGISTRO AGREGADO';
- header("Location:../cliente/vistas/tienda.html");
+ header("Location:../cliente/vistas/tiendaa.php");
  
  //exit();
  

@@ -12,12 +12,6 @@
     <script src="https://kit.fontawesome.com/18dd3f8795.js" crossorigin="anonymous"></script>
 </head>
 
-<?php
- $subtotal_text = $_POST['subtotal_text'];
-
-?>
-
-
 <body>
     <header class="encabezado">
         <img src="../img/marca.png" alt="Logo" height="70px">
@@ -26,28 +20,28 @@
         </nav>
     </header>
     <main>
-        <div class="formulario">
-            <h1>Método de pago</h1>
+        <form class="formulario" action="conexion.php" method="POST">
+            <h1>Comprobante de pago</h1>
             <div class="cont">
                 <div class="input-cont">
-                    <i class="fa fa-address-card-o icon"></i>
-                    <select name="tipo" id="documento" required>
-                        <option value="">Seleccione un tipo de documento</option>
-                        <option value="ti">Tarjeta de indentidad</option>
-                        <option value="cc">Cédula de ciudadanía</option>
-                        <option value="ce">Cédula de extranjería</option>
-                    </select>
+                    <i class="fa fa-calendar icon"></i>
+                    <input type="text" placeholder="Fecha" name="fecha" readonly>
                 </div>
                 <div class="input-cont">
-                    <i class="fa fa-credit-card icon"></i>
-                    <input type="number" min="1" 
-                        placeholder="Ingrese su número de documento" name="pass" required>
+                    <i class="fa fa-file-text-o icon"></i>
+                    <input type="text" placeholder="No. de factura" name="factura" readonly>
                 </div>
-                <p>Seleccione el método de pago:</p>
-                <input type="submit" value="Tarjeta" class="button" onclick="location.href='tarjeta.php'">
-                <input type="submit" value="PSE" class="button" onclick="location.href='pse.php'">
+                <div class="input-cont">
+                    <i class="fas fa-user icon"></i>
+                    <input type="text" placeholder="Nombre del usuario" name="user" readonly>
+                </div>
+                <div class="input-cont">
+                    <i class="fa fa-money icon"></i>
+                    <input type="text" placeholder="Total pagado" name="total" readonly>
+                </div>
+                <a href="tiendaa.php" id="enlaces">Volver a la tienda</a>
             </div>
-        </div>
+        </form>
     </main>
     <footer>
         <div class="contenedor-footer" id="contact">
@@ -69,9 +63,6 @@
             </div>
         </div>
         <h2 class="titulo-final">&copy; Creaciones Asbleidy</h2>
-        <?php
-        echo $subtotal_text;
-        ?>
     </footer>
 </body>
 
