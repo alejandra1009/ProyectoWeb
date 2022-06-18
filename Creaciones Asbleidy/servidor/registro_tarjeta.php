@@ -11,8 +11,8 @@ $sql="INSERT INTO tarjeta(nombre,numero_t,fecha_c,banco,cvv) VALUES('$nombre',$n
 $resultado=$mysqli ->query($sql);
 
 if($resultado>0){
-//echo 'REGISTRO AGREGADO';
- header("Location:../cliente/vistas/confirmacion.php");
+echo 'REGISTRO AGREGADO';
+ //header("Location:../cliente/vistas/confirmacion.php");
  
  //exit();
  

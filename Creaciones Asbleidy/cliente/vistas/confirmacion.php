@@ -22,7 +22,7 @@
     <main>
         <?php
 
-
+        include '../../servidor/registro_tarjeta.php';
         //AQUI DEBO VALIDAR SI EL USUARIO ES TARJETA O PSE Y HACER EL REGISTRO SEGUN SEA
         $nombre = $_POST['nombre'];
         $tipo_pago = 'tarjeta';
@@ -84,4 +84,5 @@
     </footer>
 </body>
 
+<!--email nombre, numero_t,fecha_c,banco,cvv -->
 </html>

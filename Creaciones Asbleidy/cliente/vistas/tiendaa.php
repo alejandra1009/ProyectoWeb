@@ -82,6 +82,7 @@ $cantidad = 0;
 
     <div class="tabla">
         <form action="datos.php" method="POST">
+            <form action="">
         <h3 class="titulo">Carrito de compras</h3>
         <table class="listado">
             <tr class="tre">
@@ -149,6 +150,8 @@ $cantidad = 0;
                 <!-- <td><a href="datos.html"><b>Pagar</b></a></td> -->
             </tr>
             </form>
+            </form>
+            
         </table>
     </div>
 

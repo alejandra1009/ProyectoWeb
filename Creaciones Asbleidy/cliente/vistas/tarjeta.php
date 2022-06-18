@@ -20,8 +20,9 @@
         </nav>
     </header>
     <main>
-        <form class="formulario" action="confirmacion.php"  method="POST">
-            <!-- action="../../servidor/registro_tarjeta.php" -->
+        <form class="formulario" action="confirmacion.php" method="POST">
+        <form class="formulario" action="../../servidor/registro_tarjeta.php" method="POST">
+        
             <!---->
             <h1>Tarjeta</h1>
             <div class="cont">
@@ -61,10 +62,11 @@
                 
                 
                 ?>
-                <input type="submit" value="Guardar" class="button" >
+                <input type="submit" value="Guardar" class="button">
                 <!-- onclick="location.href='confirmacion.php'" -->
                
             </div>
+        </form>
         </form>
     </main>
     <footer>
