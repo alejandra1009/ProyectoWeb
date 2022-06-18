@@ -29,7 +29,7 @@
         // tipo de pago
         $numero = $_POST['numero_t']; 
     //    $fecha_c2 = $_POST['fecha_c'];
-        //$banco = $_POST['banco'];
+        $banco = $_POST['banco'];
    //     $cvv2 = $_POST['cvv'];
 
         ?>
@@ -56,7 +56,7 @@
                     <input type="text" placeholder="Total a pagar" name="total" disabled>
                 </div>
                 <input type="submit" value="Cancelar" class="button" onclick="location.href='tiendaa.php'">
-                <input type="submit" value="Guardar" class="button" >
+                <input type="submit" value="Pagar" class="button" >
                 <!-- onclick="location.href='comprobante.html'"-->
             </div>
         </form>

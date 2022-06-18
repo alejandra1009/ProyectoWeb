@@ -25,7 +25,11 @@
             <div class="cont">
                 <div class="input-cont">
                     <i class="fa fa-calendar icon"></i>
-                    <input type="text" placeholder="Fecha" name="fecha" readonly>
+
+                    <?php
+                        
+                    ?>
+                    <input type="text" placeholder="<?php echo date("Y-m-d")?>" name="fecha" readonly>
                 </div>
                 <div class="input-cont">
                     <i class="fa fa-file-text-o icon"></i>
