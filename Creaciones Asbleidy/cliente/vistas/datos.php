@@ -1,6 +1,7 @@
 <?php
 
-                  
+include '../../servidor/conexion.php';
+
 $nombre_text = $_POST['nombre_text'];
 //  $color = $_POST['color'];
 // $talla = $_POST['talla'];
@@ -8,8 +9,22 @@ $precio_text = $_POST['precio_text'];
 
 //$cantidad = $_POST['cantidad'];
                 
+$sql="INSERT INTO salida(nombre) VALUES('$nombre_text')"; // agregar el registro de salida
+$resultado=$mysqli ->query($sql);
 
-                   
+if($resultado>0){
+    //echo 'REGISTRO AGREGADO';
+ //header("Location:../cliente/vistas/historiale.php");
+ 
+ //exit();
+ 
+ }else{
+     echo 'ERROOR AL AGREGAR REGISTRO';
+ }
+ 
+///////////////////////////////////////////////AQUI ESTA RELIZANDO EL REGISRO DE SALIDA
+
+
 ?>
 <!DOCTYPE html>
 <html lang="es">

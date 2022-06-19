@@ -116,8 +116,10 @@ CREATE TABLE `salida` (
   `id_i` int(11) NOT NULL,
   `id_f` int(11) NOT NULL,
   `fecha` date NOT NULL,
-  `unidades_s` int(11) NOT NULL
+  `unidades_s` int(11) NOT NULL -- estos es cantidad
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- se agrego nombre,color,talla
 
 -- --------------------------------------------------------
 

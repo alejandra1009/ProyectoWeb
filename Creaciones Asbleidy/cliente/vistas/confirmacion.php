@@ -22,7 +22,17 @@
     <main>
         <?php
 
-        include '../../servidor/registro_tarjeta.php';
+        include '../../servidor/registro_tarjeta.php';// realiza el registro de tarjeta
+      //  include '../../servidor/registrar_salida.php';
+        /* cuando se realize el registro de tarjeta quiero realizar tambien la salida del producto
+        */
+
+
+
+
+
+
+        
         //AQUI DEBO VALIDAR SI EL USUARIO ES TARJETA O PSE Y HACER EL REGISTRO SEGUN SEA
         $nombre = $_POST['nombre'];
         $tipo_pago = 'tarjeta';
@@ -41,7 +51,7 @@
                     pago, y si ya no deseas efectuar el pago presiona "Cancelar"</p>
                 <div class="input-cont">
                     <i class="fas fa-user icon"></i>
-                    <input type="text" placeholder="<?php echo $nombre; ?>" id="nombre" name="nombre" disabled>
+                    <input type="text" placeholder="<?php echo $nombre; ?>" id="nombre_2" name="nombre_2" disabled>
                 </div>
                 <div class="input-cont">
                     <i class="fa fa-credit-card-alt icon"></i>
@@ -59,6 +69,9 @@
                 <input type="submit" value="Pagar" class="button" >
                 <!-- onclick="location.href='comprobante.html'"-->
             </div>
+            <?php
+        $aux= $nombre;
+?>
         </form>
     </main>
     <footer>

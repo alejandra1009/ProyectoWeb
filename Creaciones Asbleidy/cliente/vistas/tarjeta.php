@@ -66,6 +66,7 @@
                 <!-- onclick="location.href='confirmacion.php'" -->
                
             </div>
+        
         </form>
         </form>
     </main>

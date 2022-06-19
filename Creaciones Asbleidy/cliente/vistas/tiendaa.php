@@ -2,13 +2,13 @@
 $nombre = '';
 $precio = 0;
 $cantidad = 0;
-                    if(isset($_POST['submit'])){
+                    //if(isset($_POST['submit'])){
                         $nombre = $_POST['nombre'];
                       //  $color = $_POST['color'];
                        // $talla = $_POST['talla'];
                         $precio = $_POST['precio'];
                         $cantidad = $_POST['cantidad'];
-                    }
+                    //}
                     
                 ?>
 <!DOCTYPE html>
@@ -81,8 +81,8 @@ $cantidad = 0;
 
 
     <div class="tabla">
-        <form action="datos.php" method="POST">
-            <form action="">
+        <form class="formulario" action="datos.php" method="POST">
+        <form class="formulario" action="../../servidor/registrar_salida.php" method="POST">
         <h3 class="titulo">Carrito de compras</h3>
         <table class="listado">
             <tr class="tre">
@@ -96,10 +96,10 @@ $cantidad = 0;
                 <th>Acción</th>
             </tr>
             <tr>
-                <td><input type="text" name="nombre_text" id="nombre_text" value="<?php echo($nombre)  ?>"></td>
+                <td><input type="text" id="nombre_text" name="nombre_text"  value="<?php echo($nombre)  ?>"></td>
                 <td><img src="../img/product-1.jpg" id="imgt"></td>
                 <td>
-                    <select name="colores" id="color" required>
+                    <select name="color" id="color" required>
                         <option value="">Seleccione un color</option>
                         <option value="c1">Blanco</option>
                         <option value="c2">Negro</option>
@@ -111,7 +111,7 @@ $cantidad = 0;
                     </select>
                 </td>
                 <td>
-                    <select name="tallas" id="talla" required>
+                    <select name="talla" id="talla" required>
                         <option value="">Seleccione una talla</option>
                         <option selected value="t1">23</option>
                         <option value="t2">24</option>
@@ -178,7 +178,7 @@ $cantidad = 0;
     </footer>
 
 
-   <<!-- <script src="../js/carrito.js"></script> -->
+   <!-- <script src="../js/carrito.js"></script> -->
 </body>
 
 </html>

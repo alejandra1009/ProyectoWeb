@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 
+<?php
+//$aux = $_POST['aux'];
+?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +24,7 @@
         </nav>
     </header>
     <main>
-        <form class="formulario" action="conexion.php" method="POST">
+        <form class="formulario" action="" method="POST">
             <h1>Comprobante de pago</h1>
             <div class="cont">
                 <div class="input-cont">
@@ -33,11 +37,11 @@
                 </div>
                 <div class="input-cont">
                     <i class="fa fa-file-text-o icon"></i>
-                    <input type="text" placeholder="No. de factura" name="factura" readonly>
+                    <input type="text" placeholder="1" id="n_factura" name="n_factura" readonly>
                 </div>
                 <div class="input-cont">
                     <i class="fas fa-user icon"></i>
-                    <input type="text" placeholder="Nombre del usuario" name="user" readonly>
+                    <input type="text" placeholder="<?php echo "danny"; ?>" id="user" name="user" >
                 </div>
                 <div class="input-cont">
                     <i class="fa fa-money icon"></i>
