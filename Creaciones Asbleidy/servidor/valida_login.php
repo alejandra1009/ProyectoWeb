@@ -17,7 +17,7 @@
     while ($row = $resultado->fetch_array()) {
       $email_v = $row['email'];
       $pass_v = $row['pass'];
-      
+   
 
      // echo $email_v;
      // echo $pass_v;
@@ -25,11 +25,16 @@
       if ($email===$email_v and $pass==$pass_v){
         //header("Location:../cliente/vistas/login.html");
       
-        header("Location:../cliente/vistas/tiendaa.php");
+        header("Location:../cliente/vistas/tienda.html");
 
-        //valida en cascada OJO
-
-
+        //valida en cascada OJo
+      }   
+      elseif($email_v = 'admin@hotmail.com'){
+        header("Location:../cliente/vistas/inicio.html");
+      
+      
+      
+      
       }else{
        // header("Location:../cliente/vistas/tienda.html");
       echo '<script type ="text/JavaScript">';  
@@ -42,7 +47,7 @@
       }
     }
 
-    
+
   }
  
 
