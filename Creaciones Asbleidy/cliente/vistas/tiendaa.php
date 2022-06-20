@@ -101,38 +101,38 @@ $cantidad = 0;
                 <td>
                     <select name="color" id="color" required>
                         <option value="">Seleccione un color</option>
-                        <option value="c1">Blanco</option>
-                        <option value="c2">Negro</option>
-                        <option value="c3">Marrón</option>
-                        <option value="c4">Rojo</option>
-                        <option value="c5">Azul</option>
-                        <option value="c6">Gris</option>
-                        <option selected value="c7">Rosado</option>
+                        <option value="Blanco">Blanco</option>
+                        <option value="Negro">Negro</option>
+                        <option value="Marron">Marrón</option>
+                        <option value="Rojo">Rojo</option>
+                        <option value="Azul">Azul</option>
+                        <option value="Gris">Gris</option>
+                        <option selected value="Rosado">Rosado</option>
                     </select>
                 </td>
                 <td>
                     <select name="talla" id="talla" required>
                         <option value="">Seleccione una talla</option>
-                        <option selected value="t1">23</option>
-                        <option value="t2">24</option>
-                        <option value="t3">25</option>
-                        <option value="t4">26</option>
-                        <option value="t5">27</option>
-                        <option value="t6">28</option>
-                        <option value="t7">29</option>
-                        <option value="t8">30</option>
-                        <option value="t9">31</option>
-                        <option value="t10">32</option>
-                        <option value="t11">33</option>
-                        <option value="t12">34</option>
-                        <option value="t13">35</option>
-                        <option value="t14">36</option>
-                        <option value="t15">37</option>
-                        <option value="t16">38</option>
-                        <option value="t17">39</option>
-                        <option value="t18">40</option>
-                        <option value="t19">41</option>
-                        <option value="t20">42</option>
+                        <option selected value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                        <option value="32">32</option>
+                        <option value="33">33</option>
+                        <option value="34">34</option>
+                        <option value="35">35</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
                 </td>
                 <td><input type="text" name="precio_text" id="precio_text" value="<?php echo($precio) ?>" ></td>
                 <td ><input type="text" name="cantidad_text" id="cantidad_text"  value="<?php echo($cantidad) ?>"></td>

@@ -3,13 +3,17 @@
 include '../../servidor/conexion.php';
 
 $nombre_text = $_POST['nombre_text'];
-//  $color = $_POST['color'];
-// $talla = $_POST['talla'];
+$color = $_POST['color'];
+$talla = $_POST['talla'];
+$cantidad_text = $_POST['cantidad_text'];
 $precio_text = $_POST['precio_text'];
 
 //$cantidad = $_POST['cantidad'];
                 
-$sql="INSERT INTO salida(nombre) VALUES('$nombre_text')"; // agregar el registro de salida
+
+
+///////////////////////////////////////////////////////registro de salida
+$sql="INSERT INTO salida(nombre,color,talla,cantidad) VALUES('$nombre_text','$color',$talla,$cantidad_text)"; // agregar el registro de salida
 $resultado=$mysqli ->query($sql);
 
 if($resultado>0){
