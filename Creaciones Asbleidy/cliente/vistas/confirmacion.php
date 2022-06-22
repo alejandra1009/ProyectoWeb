@@ -63,7 +63,7 @@
                 </div>
                 <div class="input-cont">
                     <i class="fa fa-money icon"></i>
-                    <input type="text" placeholder="Total a pagar" name="total" disabled>
+                    <input type="text" placeholder="600000" name="total" disabled>
                 </div>
                 <input type="submit" value="Cancelar" class="button" onclick="location.href='tiendaa.php'">
                 <input type="submit" value="Pagar" class="button" >

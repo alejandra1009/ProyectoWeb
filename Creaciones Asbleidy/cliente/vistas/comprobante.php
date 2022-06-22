@@ -45,7 +45,7 @@
                 </div>
                 <div class="input-cont">
                     <i class="fa fa-money icon"></i>
-                    <input type="text" placeholder="Total pagado" name="total" readonly>
+                    <input type="text" placeholder="600000" name="total" readonly>
                 </div>
                 <a href="tiendaa.php" id="enlaces">Volver a la tienda</a>
             </div>
