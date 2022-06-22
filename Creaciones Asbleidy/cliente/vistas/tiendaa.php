@@ -97,7 +97,7 @@ $cantidad = 0;
             </tr>
             <tr>
                 <td><input type="text" id="nombre_text" name="nombre_text"  value="<?php echo($nombre)  ?>"></td>
-                <td><img src="../img/product-1.jpg" id="imgt"></td>
+                <td><img src="../img/product-9.jpg" id="imgt"></td>
                 <td>
                     <select name="color" id="color" required>
                         <option value="">Seleccione un color</option>

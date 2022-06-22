@@ -33,34 +33,94 @@
                         <select name="nombre" id="nombre" required>
                             <option>Seleccione un producto</option> <!-- VALIDAR SI EL NOMBRE DEL PRODUCTO VA EN VALUE -->
 
-
-
-
+               
 
                 <!-- HACER LO DE LA FECHA ACTUAL..-->
                 <?php
             include '../../servidor/conexion.php';
             $consulta="SELECT * from producto";
+           // $consulta2="SELECT * from producto"; // agregado para el update
+           $i=0;
             $resultado=mysqli_query($mysqli,$consulta);
                     if($resultado){ while($row = $resultado->fetch_array()){
+                        $i=$i+1;
                         $codigo = $row['codigo'];
                         $nombre = $row['nombre'];
 
                         $aux = $nombre;
-                    ?>
+                    ?>  
+                    
 
                             
                             <option value="<?php $nombre;?>"><?php echo $nombre; ?></option>
-                        
+                            
+                            
                 <?php
-
+                
                     }
                 }
 
-                ?>
 
+
+                ?>
+                            
+                          
                            </select>
                            </div>
+
+
+
+                    <!-- agregado al update -->
+
+                    <div class="input-cont">
+                        <i class="fa fa-archive icon"></i>
+                        <select name="nombre" id="nombre" required>
+                            <option>Seleccione el codigo de inventario</option> <!-- VALIDAR SI EL NOMBRE DEL PRODUCTO VA EN VALUE -->
+
+               
+
+                <!-- HACER LO DE LA FECHA ACTUAL..-->
+                <?php
+            include '../../servidor/conexion.php';
+            $consulta="SELECT id_i from inventario";
+           // $consulta2="SELECT * from producto"; // agregado para el update
+           $i=0;
+            $resultado=mysqli_query($mysqli,$consulta);
+                    if($resultado){ while($row = $resultado->fetch_array()){
+                        
+                        $id_i = $row['id_i'];
+                       
+
+                      
+                    ?>  
+                    
+                            <option value="<?php $id_i;?>"><?php echo $id_i; ?></option>
+                            
+                            
+                <?php
+                
+                    }
+                }
+
+
+
+                ?>
+                            
+                          
+                           </select>
+                           </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
                
                 <div class="input-cont">

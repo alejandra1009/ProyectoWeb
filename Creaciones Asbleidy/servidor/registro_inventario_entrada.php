@@ -8,7 +8,7 @@
     $talla = $_POST['talla'];
     //debo registrar el inventario y la entrada, pendiente el nombre que va en select
 
-    /*
+    /* UPDATE INVENTARIO SET UNIDADES_I=0 WHERE ID_E=4
 
     //CONSULTAR DEL CODIGO DEL PRODUCTO
 
@@ -19,6 +19,9 @@ $sql="INSERT INTO inventario (unidades_d,color,talla) VALUES($cantidad,'$color',
 $sql2="INSERT INTO entrada (fecha,unidades_i,nombre,color,talla) VALUES('$fecha',$cantidad,'$nombre','$color',$talla)"; //QUEDA PENDIENTE ID_I
 $resultado=$mysqli ->query($sql);
 $resultado2=$mysqli ->query($sql2);
+
+// aqui voy hacerle un update al inventario
+
 
 if($resultado>0){
     //echo 'REGISTRO AGREGADO';
